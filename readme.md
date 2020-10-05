@@ -15,10 +15,11 @@ Beta CI Build Status
 - [.NET SDK](https://dotnet.microsoft.com/download)
 - [Visual Studio Code](https://code.visualstudio.com)
 - [Visual Studio Community](https://visualstudio.microsoft.com/es/vs/)
+- [Docker](https://docs.docker.com/get-docker/)
 
 ## Running the app for the first time
 
-0. Run the script (init.sh or init.bat), this will install all command line tools
+0. Run the script (init.sh or init.bat), this will install all command line tools, and it will initialize and setup the [database](docs/Database.md)
 1. Open the solution
 2. Restore the nuget packages
 3. Run the Web project
@@ -46,6 +47,12 @@ It gets installed when you run the `init.sh` script.
 Rename the `appsetting.template.json` file to `appsetting.json` and complete the client ids and secrets for each authentication provider you want to use.
 
 You can see a [step-by-step guide](docs/Authentication.md) of how to do it.
+
+### Configure Database
+
+Replace the password for the database in the files `docker.sh` or `docker.bat` and `init.sh` or `init.bat` accordingly to your OS.
+
+You can find more information [here](docs/Database.md) about the database.
 
 #### Ignoring changes of the appsettings file
 
